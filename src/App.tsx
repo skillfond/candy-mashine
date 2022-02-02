@@ -35,6 +35,7 @@ const theme = createTheme({
 		},
   },
   typography: {
+    fontFamily: '"Brutal Type", sans-serif',
 		h1: {
 			fontFamily: '"Brutal Type", sans-serif',
 		},
@@ -54,6 +55,21 @@ const theme = createTheme({
 			fontFamily: '"Brutal Type", sans-serif',
 		},
 		body1: {
+			fontFamily: '"Brutal Type", sans-serif',
+		},
+		body2: {
+			fontFamily: '"Brutal Type", sans-serif',
+		},
+		caption: {
+			fontFamily: '"Brutal Type", sans-serif',
+		},
+		subtitle1: {
+			fontFamily: '"Brutal Type", sans-serif',
+		},
+		subtitle2: {
+			fontFamily: '"Brutal Type", sans-serif',
+		},
+		button: {
 			fontFamily: '"Brutal Type", sans-serif',
 		},
 	},

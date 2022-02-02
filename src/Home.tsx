@@ -83,20 +83,21 @@ let useStyles = makeStyles((theme: Theme) => ({
 		backdropFilter: "blur(2px)",
 	},
 	first: {
-		minHeight: "100vh",
-		background:
-			"radial-gradient(circle, rgba(2,1,9,1) 0%, rgba(43,22,49,1) 50%, rgba(2,1,9,1) 100%)",
+    minHeight: "100vh",
+    backgroundColor: "#000",
+		/* background:
+			"radial-gradient(circle, rgba(2,1,9,1) 0%, rgba(43,22,49,1) 50%, rgba(2,1,9,1) 100%)", */
 		position: "relative",
 		borderRadius: "0 !important",
 		boxShadow: "none",
-		zIndex: 0,
+		zIndex: -1,
 	},
 	imgFon: {
-		position: "absolute",
-		backgroundImage: " url(./img/first.webp)",
+		position: "fixed",
+		backgroundImage: " url(./img/newfon.png)",
 		width: "100%",
 		height: "100%",
-		backgroundSize: "contain",
+		backgroundSize: "cover",
 		backgroundPosition: "center center",
 		backgroundRepeat: "no-repeat",
 		zIndex: -1,
@@ -300,6 +301,7 @@ const Home = (props: HomeProps) => {
     } as anchor.Wallet;
   }, [wallet]);
 
+  
   const refreshCandyMachineState = useCallback(async () => {
     if (!anchorWallet) {
       return;
@@ -381,14 +383,13 @@ const Home = (props: HomeProps) => {
       setIsUserMinting(false);
     }
   };
-
   useEffect(() => {
     refreshCandyMachineState();
   }, [
     anchorWallet,
     props.candyMachineId,
     props.connection,
-    refreshCandyMachineState,
+    refreshCandyMachineState
   ]);
 
   return (
@@ -808,7 +809,7 @@ const Home = (props: HomeProps) => {
 				</Container>
 			</Paper>
 			<Paper id='fourth' className={styles.paperFo}>
-				<Container maxWidth={false}>
+				<Container maxWidth={"sm"}>
 					<Typography
 						variant='h1'
 						component='h2'
